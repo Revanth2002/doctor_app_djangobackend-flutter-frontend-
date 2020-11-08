@@ -15,11 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from hospital.views import register_user,login_user,doctor,patient,logou_user,createpatient,patientupdateview,detailviewdoctor,patientlist,PatientApi
+from hospital.views import register_user,login_user,doctor,patient,logou_user,createpatient,patientupdateview,detailviewdoctor,patientlist,PatientApi,home
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/',register_user,name='register'),
-    path('',login_user,name='login'),
+    path('',home,name='home'),
+    path('login/',login_user,name='login'),
     path('doctor/',doctor,name='doctor'),
     path('patient/',patient,name='patient'),
     path('logout/',logou_user,name='logout'),
