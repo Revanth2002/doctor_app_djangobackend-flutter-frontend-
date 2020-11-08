@@ -1,0 +1,16 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+    <h1>ID:{{pat.id}}</h1>
+     <h1>NAME:{{pat.name}}</h1>
+     <h1>DOCTOR:{{pat.doctor}}</h1>
+     <h1>PROBLEM:{{pat.problem}}</h1>
+     <h2>MEDICATION GIVEN:{{pat.medication}}</h2>
+    <h2>AGE:{{pat.age}}</h2>
+    <h2>Date Admitted:{{p.date_joined}}</h2>
+    
+    <a href="{% url 'update' pat.id %}">update</a>
+    </body>
+</html>

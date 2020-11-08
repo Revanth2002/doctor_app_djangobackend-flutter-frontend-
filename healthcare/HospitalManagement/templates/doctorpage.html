@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>Doctor</title>
+    </head>
+    <body>
+        <p>Welcome docto</p>
+        {% for i in p %}
+        <h1>{{i.name}}</h1>
+        <a href="{% url 'detail' i.id %}" >detail</a>
+        {% endfor %}
+        <a href="{% url 'logout' %}">Logout</a>
+        <a href ="{% url 'createpatient' %}">ADD</a>
+    </body>
+</html>
