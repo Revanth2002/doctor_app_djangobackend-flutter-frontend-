@@ -16,8 +16,10 @@ from .serializers import PatientSerializer
 class PatientApi(generics.RetrieveUpdateAPIView):
     queryset=Patientdetails.objects.all()
     serializer_class = PatientSerializer
+   
 
-
+def home(request):
+    return render(request,'home.html')
 
 def register_user(request):
     r=Register()
