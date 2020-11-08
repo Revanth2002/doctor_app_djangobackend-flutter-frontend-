@@ -1,16 +1,23 @@
-<html>
-    <head>
-
-    </head>
-    <body>
-    <h1>ID:{{pat.id}}</h1>
-     <h1>NAME:{{pat.name}}</h1>
-     <h1>DOCTOR:{{pat.doctor}}</h1>
-     <h1>PROBLEM:{{pat.problem}}</h1>
-     <h2>MEDICATION GIVEN:{{pat.medication}}</h2>
-    <h2>AGE:{{pat.age}}</h2>
-    <h2>Date Admitted:{{p.date_joined}}</h2>
+{% extends 'base.html' %}
+{% block main %}
+<div class="container ">
+    <div class="jumbotron">
+    <h1>ID:   {{pat.id}}</h1><br>
+     <h1>NAME:   {{pat.name}}</h1><br>
+     <h1>DOCTOR:   {{pat.doctor}}</h1><br>
+     <h1>PROBLEM:   {{pat.problem}}</h1><br>
+     <h2>MEDICATION GIVEN:   {{pat.medication}}</h2><br>
+    <h2>AGE:   {{pat.age}}</h2><br>
+    <h2>Date Admitted:   {{p.date_joined}}</h2><br>
     
-    <a href="{% url 'update' pat.id %}">update</a>
-    </body>
-</html>
+    <a href="{% url 'update' pat.id %}" class="btn btn-success">update</a>
+</div>
+</div>
+<style>
+    .jumbotron{
+        background-color:whitesmoke;
+        opacity: 90%;
+        padding-left: 50px;
+    }
+</style>
+{% endblock main %}

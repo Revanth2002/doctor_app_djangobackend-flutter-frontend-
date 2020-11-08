@@ -1,13 +1,37 @@
-<html>
-    <head>
-
-    </head>
-    <body>
-        <form method="POST">
-        {% csrf_token %}
-        {{form.as_p}}
-        <input type="submit" value="submit">
-        </form>
-    </body>
-
-</html>
+{% extends 'base.html' %}
+{% block main %}
+<div class="container ">
+    <div class="jumbotron">
+      <h1><u>Welcome to,<b>Medicare</b> group of Hospitals!</u></h1>
+      <blockquote class="blockquote">
+        
+        <footer class="blockquote-footer">We care for <cite title="Source Title">Your HEALTH....</cite></footer>
+      </blockquote>
+      <div class="container">
+      <h2>Goals..</h2><hr>
+      <p>1)Improve the life of people..</p>
+      <p>2)Better communication between doctors and patients....</p>
+      <p>3)Improvement in customer satisfaction...
+      </p>
+      </div>
+      <div class="container"> 
+          <h2>Achivements...</h2><hr>
+          <p><b>Arjuna award (2009):</b> For the best hospital in country...</p>
+          <p><b>Harper avery award...(2006)</b> For high success rate...</p>
+      </div>
+      <div class="contianer">
+          <h2></h2>
+      </div>
+    </div>
+  </div>
+  <footer id="f">
+      <p><b>Email:</b><br>medicare@medicare.com</p>
+      <p><b>Address:</b><br>No:9,Kakathopu,chennai-904</p>
+  </footer>
+  <style>
+    #f{
+        background-color:white;
+        
+    }
+  </style>
+ {% endblock main %}

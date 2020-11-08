@@ -1,16 +1,14 @@
-<html>
-    <head>
-        <title>
-            patient
-        </title>
-    </head>
-    <body>
-        <p>print patinet</p>
-        {{p.name}}
-        {{p.doctor}}
-        {{p.problem}}
-        {{p.medication}}
-        {{p.age}}
-        <a href="{% url 'logout' %}">Logout</a>    
-    </body>
-</html>
+{% extends 'base.html' %}
+{% block main %}
+
+        <div class="container jumbotron">
+            <h1>Welcome,{{p.name}}</h1>
+            <hr>
+            <h3>NAME:{{p.name}}</h3>
+            <h3>AGE:{{p.age}}</h3>
+            <h3>ATTENDIG DOCTOR:{{p.doctor}}</h3>
+            <h3>COMPLAINT:{{p.problem}}</h3>
+            <h3>MEDICATION GIVEN:{{p.medication}}</h3>
+        </div>
+        
+{% endblock main %}

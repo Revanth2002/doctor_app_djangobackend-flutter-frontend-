@@ -1,12 +1,13 @@
-<html>
-    <head>
-
-    </head>
-    <body>
+{% extends 'base.html' %}
+{% block main %}
+<div class="container">
+    <div class="jumbotron">
+    <h2>Add your Patient here...</h2>
         <form method="POST">
             {% csrf_token %}
             {{f.as_p}}
-            <input type="submit" value="Add">
+            <input type="submit" value="Add" class="btn btn-primary">
         </form>
-    </body>
-</html>
+</div>
+</div>
+{% endblock main %}

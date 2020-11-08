@@ -1,14 +1,22 @@
-<html>
-    <head>
-        <title>Doctor</title>
-    </head>
-    <body>
-        <p>Welcome docto</p>
+{% extends 'base.html' %}
+{% block main %}
+    <h1>Your patients <b>Doctor..</b><a href ="{% url 'createpatient' %}" class="btn btn-danger float-right">ADD PATINT</a></p>
+        <br></h1>
         {% for i in p %}
-        <h1>{{i.name}}</h1>
-        <a href="{% url 'detail' i.id %}" >detail</a>
+        <div class="container ">
+        
+        <a href="{% url 'detail' i.id %}" ><h1><b>{{i.name}}</b></h1></a>
+        <h2>ID:{{i.id}}</h2>
+        </div>
+       
         {% endfor %}
-        <a href="{% url 'logout' %}">Logout</a>
-        <a href ="{% url 'createpatient' %}">ADD</a>
-    </body>
-</html>
+        <style>
+            .container{
+                background-color: whitesmoke;
+                opacity:90%;
+                padding-left: 50px;
+                
+            }
+        </style>     
+        
+{% endblock main %}

@@ -1,9 +1,12 @@
-<html>
-    <body>
+{% extends 'base.html' %}
+{% block main %}
+<div class="container jumbotron">
         <form method="POST">
+            <h3>Update here....</h3> <hr>
+           
             {% csrf_token %}
             {{form.as_p}}
-            <input type="submit" value="sumbit">
+            <input type="submit" value="sumbit" class="btn btn-primary float-right">
         </form>
-    </body>
-</html>
+</div>
+{% endblock main %}

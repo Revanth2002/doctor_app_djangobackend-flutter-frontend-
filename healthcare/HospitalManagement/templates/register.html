@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block main %}
+<div class="container">
+    <div class="jumbotron">
+        <h2>Welcome to the <b>FAMILY...</b></h2>
+        <p></p>
+    <form method="POST">
+        {% csrf_token %}
+        <label><b>Username:</b></label>
+        {{form.username}}<br>
+        <label><b>Email:</b></label>
+        {{form.email}}<br>
+        <label><b>Password:</b></label>
+        {{form.password1}}<br>
+        <label><b>Confirm Password:</b></label>
+        {{form.password2}}<br>
+        <br>
+        <input type='submit' class="btn btn-primary"  value="Register">
+    </form>
+    </div>
+</div>
+{% endblock main %}
